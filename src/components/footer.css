@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+footer{
+  background: #495e57;
+  margin-top: 7rem;
+}
+.navigator{
+  width: 70%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.navigator img{
+  align-self: center;
+}
+.navigator ul li{
+  list-style: none;
+  text-align: center;
+}
+.navigator ul li a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigator .contact{
+  text-align: center;
+}

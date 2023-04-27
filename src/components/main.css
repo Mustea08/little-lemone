@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+}
+
+.mainC {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #495e57;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.mainC .content {
+  width: 35%;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-family: "Markazi Text";
+  color: #f4ce14;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.content h3 {
+  color: #ffffff;
+  font-family: Karla;
+}
+
+.content p {
+  width: 325px;
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+button {
+  background: #f4ce14;
+  font-size: 1.1rem;
+  color: #000000;
+  border: none;
+  border-radius: 7px;
+  padding: .6rem;
+  margin-bottom: 1rem;
+}
+
+
+.mainC .image {
+  width: 17%;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.mainC .image img {
+  width: 100%;
+  position: absolute;
+  border-radius: 7px;
+  height: 260px;
+}
+
+/*------------------------------------------------------------------------
+ -----------------for the special class and card of foods-------------------
+ ----------------------------------------------------------------------------*/
+.special {
+  margin-top: 3rem;
+}
+
+.lr {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.parent {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+
+.card {
+  width: 18%;
+  margin: 0 1%;
+  border-radius: 7px;
+  background: #ccc;
+}
+
+.card img {
+  width: 100%;
+  height: 10rem;
+  border-radius: 7px 7px 0 0;
+}
+
+.card h4 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card span {
+  text-align: right;
+  color: tomato;
+}
+
+.card p:first-of-type {
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card p {
+  padding-left: 1rem;
+  margin-bottom: .6rem;
+}
+
+/*------------------------------------------------------
+----------------- for the testimony rating people --------------
+---------------------------------------------------------------*/
+.testimony {
+  background-color: #495e57;
+  margin-top: 2rem;
+}
+
+.testimony>h1 {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.7rem;
+}
+
+.testimony .card {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  background-color: transparent;
+}
+
+.card .rate {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.card .rate p {
+  color: #ffffff;
+}
+
+/*-----------------------------------------------------------------
+------------------ for about of the little lemone-------------------
+----------------------------------------------------------------- */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin: 2rem auto 4rem auto;
+}
+
+.contents {
+  width: 35%;
+  padding-top: 2rem;
+  margin-right: 10rem;
+}
+
+.contents h1 {
+  font-family: "Inria Serif";
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.contents h3 {
+  font-family: "Inria Serif";
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.contents p {
+  width: 325px;
+  margin: 2rem 0;
+}
+
+.about .pictures {
+  width: 40%;
+  position: relative;
+}
+
+.about .pictures img {
+  width: 50%;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  height: 200px;
+}
+
+.pictures img:first-of-type {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.pictures img:last-of-type {
+  z-index: 2;
+  position: absolute;
+  top: -80px;
+  right: 90px;
+}
+
