@@ -7,16 +7,22 @@ footer{
   margin-top: 7rem;
 }
 .navigator{
-  width: 70%;
+  width: 100%;
   margin: auto;
   padding: 2rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-
 }
-.navigator img{
-  align-self: center;
+.navigator .card-f{
+  width: 230px;
+  margin: 1rem 1rem 0 0;
+  text-align: center;
+}
+.navigator .logo{
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 .navigator ul li{
   list-style: none;

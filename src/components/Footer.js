@@ -6,12 +6,12 @@ const Footer = () => {
   return (
     <footer>
       <div className="navigator">
-        <div className="logo">
+        <div className="card-f logo">
           <a href="#home">
             <img src={logo} alt="logo" />
           </a>
         </div>
-        <div className="dormant">
+        <div className="card-f dormant">
           <h5>dormant navigation</h5>
           <ul>
             <li>
@@ -34,7 +34,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="contact">
+        <div className="card-f contact">
           <h5>contact-us</h5>
           <ul>
             <li>
@@ -48,7 +48,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="media">
+        <div className="card-f media">
           <h5>social media links</h5>
           <ul>
             <li>

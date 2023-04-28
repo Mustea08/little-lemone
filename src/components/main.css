@@ -1,10 +1,14 @@
 * {
   margin: 0;
 }
+main{
+  width: 100%;
+}
 
 .mainC {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: #495e57;
   flex-wrap: wrap;
@@ -12,7 +16,9 @@
 }
 
 .mainC .content {
-  width: 35%;
+  /* width: 35%; */
+  width: 400px;
+  /* padding-right: 2rem; */
   margin-top: 1rem;
 }
 
@@ -46,14 +52,15 @@ button {
 
 
 .mainC .image {
-  width: 17%;
+  /* width: 17%; */
+  width: 260px;
   margin-top: 1rem;
-  position: relative;
+  /* position: relative; */
 }
 
 .mainC .image img {
   width: 100%;
-  position: absolute;
+  /* position: absolute; */
   border-radius: 7px;
   height: 260px;
 }
@@ -80,8 +87,9 @@ button {
 }
 
 .card {
-  width: 18%;
-  margin: 0 1%;
+  /* width: 18%; */
+  width: 250px;
+  margin: 1rem 1% 0 1%;
   border-radius: 7px;
   background: #ccc;
 }
@@ -129,12 +137,15 @@ button {
 .testimony .card {
   display: flex;
   justify-content: space-around;
-  width: 70%;
+  flex-wrap: wrap;
+  /* width: 70%; */
+  width: 100%;
   margin: auto;
   background-color: transparent;
 }
 
 .card .rate {
+  width: 200px;
   margin-bottom: 1rem;
   margin-right: 2rem;
 }
@@ -149,15 +160,18 @@ button {
 .about {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  max-width: 70%;
+  max-width: 100%;
   margin: 2rem auto 4rem auto;
 }
 
 .contents {
-  width: 35%;
+  /* width: 35%; */
+  width: 400px;
   padding-top: 2rem;
-  margin-right: 10rem;
+  margin-right: 3rem;
 }
 
 .contents h1 {
@@ -179,7 +193,8 @@ button {
 }
 
 .about .pictures {
-  width: 40%;
+  /* width: 40%; */
+  min-width: 300px;
   position: relative;
 }
 
@@ -203,3 +218,20 @@ button {
   right: 90px;
 }
 
+/* ------------------------------------------------------------
+------------------media qurey responsive design-----------------
+---------------------------------------------------------------- */
+@media only screen and (max-width: 780px){
+  .about{
+    flex-direction: column;
+  }
+  .about .pictures{
+    position: static;
+  }
+  .pictures img:first-of-type{
+    position: static;
+  }
+  .pictures img:last-of-type{
+    position: static;
+  }
+}
