@@ -14,7 +14,7 @@ import "./main.css";
 const Main = () => {
   return (
     <main>
-      <section className="mainC" id="home">
+      <section className="mainC" >
         <div className="content">
           <h1>Little Lemon</h1>
           <h3>Cairo</h3>

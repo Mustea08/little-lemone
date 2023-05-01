@@ -165,6 +165,7 @@ button {
   align-items: center;
   max-width: 100%;
   margin: 2rem auto 4rem auto;
+  box-sizing: border-box;
 }
 
 .contents {
@@ -222,16 +223,32 @@ button {
 ------------------media qurey responsive design-----------------
 ---------------------------------------------------------------- */
 @media only screen and (max-width: 780px){
+  .mainC .content{
+    margin-left: 1rem;
+  }
   .about{
     flex-direction: column;
+    overflow-x: hidden;
+  }
+  .about .contents{
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  .contents>p{
+    margin-right: 0;
   }
   .about .pictures{
     position: static;
+    max-width: 100%;
   }
   .pictures img:first-of-type{
     position: static;
+    width: 45%;
+    margin: 0 2% 0 2%;
   }
   .pictures img:last-of-type{
     position: static;
+    width: 45%;
+    margin: 0 2% 0 2%;
   }
 }
