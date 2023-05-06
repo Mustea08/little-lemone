@@ -8,7 +8,7 @@ nav{
   overflow-x: hidden;
   /* background-color: #ffb703; */
 }
-nav > a{
+nav > .logo{
   margin-right: 3rem;
 }
 
@@ -21,7 +21,7 @@ nav ul li{
   margin: 0 .4rem;
 }
 nav ul li:last-of-type{
-  margin: 0 .2rem 0 0;
+  margin: 0 .2rem 0 0.1rem;
 }
 nav ul li a{
   text-decoration: none;

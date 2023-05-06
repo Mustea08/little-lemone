@@ -1,0 +1,113 @@
+.reservation {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  background-color: #495e57;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.reservation .reservOne {
+  width: 400px;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.reservOne h3 {
+  color: #ffffff;
+  font-family: Karla;
+}
+
+.reservOne>p {
+  width: 325px;
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+.reservImage {
+  max-width: 350px;
+  padding-left: 1rem;
+  display: flex;
+  margin-top: 1rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.reservImage::-webkit-scrollbar {
+  width: 20px;
+}
+
+.reservImage::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.reservImage::-webkit-scrollbar-thumb {
+  background: #f4ce14;
+  border-radius: 10px;
+}
+
+.reservation::-webkit-scrollbar-thumb:hover {
+  background: #2f2702;
+}
+
+.reservImage img {
+  width: 90%;
+  height: 350px;
+  padding-right: 2%;
+  scroll-snap-align: center;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 45%;
+  height: 2rem;
+  content: attr(placeholder) !important;
+  margin: auto;
+  margin-bottom: .5rem;
+}
+
+input[type="number"],
+input[name="occasion"]{
+  width: 90%;
+  height: 2rem;
+  margin: auto;
+  margin-bottom: .5rem;
+}
+datalist option{
+  width: 100%;
+  background: #495e57;
+  margin-bottom: .2rem;
+}
+
+p.option{
+  color: #f4ce14;
+}
+label{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  color: #ffffff;
+}
+input[type="radio"]{
+  accent-color: #f4ce14;
+}
+label + button{
+  margin-top: 1rem;
+  width: 90%;
+}
+label + button:hover{
+  background: #c7a705;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------
+------------------media qurey responsive design-----------------
+---------------------------------------------------------------- */
+@media only screen and (max-width: 780px){
+  .reservation{
+    flex-direction: column-reverse;
+  }
+}
