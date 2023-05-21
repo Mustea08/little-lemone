@@ -4,6 +4,8 @@ import Footer from "../Footer";
 import restaurant from "../../images/restaurant.jpg";
 import chef from "../../images/chef.jpg";
 import food from "../../images/restauranfood.jpg";
+import { submitAPI } from "../fake-api/fakeapi";
+import { Link, useNavigate } from "react-router-dom";
 
 const Resrvation = () => {
   const [date, setDate] = useState("");
@@ -20,25 +22,31 @@ const Resrvation = () => {
     { id: 7, value: "12:00pm" },
   ];
   const occa = [
-    {value: "pick an occasion"},
-    {value: "anniversary" },
-    {value: "Birthday" },
-    {value: "engagement" },
+    { value: "pick an occasion" },
+    { value: "anniversary" },
+    { value: "Birthday" },
+    { value: "engagement" },
   ];
-  const [tim, setTim] = useState({value : "select time"});
+  const [tim, setTim] = useState({ value: "select time" });
   const [occasion, setOccasion] = useState(occa[0].value);
 
   const timeList = select.map((t) => <option key={t.id}>{t.value}</option>);
-  const occaList = occa.map((list) => <option key={list.value}>{list.value}</option>);
-
+  const occaList = occa.map((list) => (
+    <option key={list.value}>{list.value}</option>
+  ));
+const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
     setDate("");
     setNumber(1);
-    setTim({value : "select time"});
+    setTim({ value: "select time" });
     setOccasion(occa[0].value);
     setRadios(false);
-    alert("your form is submited successfully");
+    // alert("your form is submited successfully");
+    if(date && tim && radios){
+      navigate("/confirmed");
+
+    }
   }
   return (
     <>
@@ -68,7 +76,7 @@ const Resrvation = () => {
                   required
                   onChange={(e) => setTim(e.target.value)}
                 >
-                  <option value="" selected>pick a time</option>
+                  <option value="">pick a time</option>
                   {timeList}
                 </select>
               </div>
@@ -128,7 +136,9 @@ const Resrvation = () => {
                 </label>
               </div>
             </div>
-            <button type="submit" aria-label="on click">Let's go</button>
+            <button type="submit" aria-label="on click">
+              Let's go
+            </button>
           </form>
         </div>
         <div className="reservImage">
