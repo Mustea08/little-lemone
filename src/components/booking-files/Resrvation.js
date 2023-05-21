@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./reservation.css";
-import Footer from "./Footer";
-import restaurant from "../images/restaurant.jpg";
-import chef from "../images/chef.jpg";
-import food from "../images/restauranfood.jpg";
+import Footer from "../Footer";
+import restaurant from "../../images/restaurant.jpg";
+import chef from "../../images/chef.jpg";
+import food from "../../images/restauranfood.jpg";
 
 const Resrvation = () => {
   const [date, setDate] = useState("");
   const [number, setNumber] = useState(1);
+  const [radios, setRadios] = useState(false);
   const select = [
     { id: 0, value: "5:00pm" },
     { id: 1, value: "6:00pm" },
@@ -15,24 +16,36 @@ const Resrvation = () => {
     { id: 3, value: "8:00pm" },
     { id: 4, value: "9:00pm" },
     { id: 5, value: "10:00pm" },
-    { id: 6, value: "11:00pm" }
+    { id: 6, value: "11:00pm" },
+    { id: 7, value: "12:00pm" },
   ];
-  const [tim, setTim] = useState(select[0].value);
+  const occa = [
+    {value: "pick an occasion"},
+    {value: "anniversary" },
+    {value: "Birthday" },
+    {value: "engagement" },
+  ];
+  const [tim, setTim] = useState({value : "select time"});
+  const [occasion, setOccasion] = useState(occa[0].value);
 
   const timeList = select.map((t) => <option key={t.id}>{t.value}</option>);
+  const occaList = occa.map((list) => <option key={list.value}>{list.value}</option>);
 
   function handleSubmit(e) {
     e.preventDefault();
     setDate("");
     setNumber(1);
-    setTim(select[0].value);
+    setTim({value : "select time"});
+    setOccasion(occa[0].value);
+    setRadios(false);
+    alert("your form is submited successfully");
   }
   return (
     <>
       <div className="reservation">
         <div className="reservOne">
           {/* <button>&larr;</button> */}
-          <h1>Little Lemone</h1>
+          <h1>Book Now</h1>
           <h3>Cairo</h3>
           <p>find a table for any occasion</p>
           <form action="" onSubmit={handleSubmit}>
@@ -55,14 +68,8 @@ const Resrvation = () => {
                   required
                   onChange={(e) => setTim(e.target.value)}
                 >
+                  <option value="" selected>pick a time</option>
                   {timeList}
-                  {/* <option>5:00pm</option>
-                  <option>6:00pm</option>
-                  <option>7:00pm</option>
-                  <option>8:00pm</option>
-                  <option>9:00pm</option>
-                  <option>10:00pm</option>
-                  <option>11:00pm</option> */}
                 </select>
               </div>
             </div>
@@ -77,11 +84,17 @@ const Resrvation = () => {
               max="15"
             />
             <label htmlFor="occasions">occasions</label>
-            <select id="occasions">
-              <option value="pick an occation">pick an occation</option>
+            <select
+              id="occasions"
+              value={occasion}
+              required
+              onChange={(e) => setOccasion(e.target.value)}
+            >
+              {/* <option value="pick an occation">pick an occation</option>
               <option value="anniversary">anniversary</option>
               <option value="birthday">birthday</option>
-              <option value="engagement">engagement</option>
+              <option value="engagement">engagement</option> */}
+              {occaList}
             </select>
 
             <p className="option">Seating option</p>
@@ -94,6 +107,9 @@ const Resrvation = () => {
                     name="seating-option"
                     id="standard"
                     value="standard"
+                    checked={radios}
+                    onChange={() => setRadios(true)}
+                    required
                   />
                 </label>
               </div>
@@ -105,11 +121,14 @@ const Resrvation = () => {
                     name="seating-option"
                     id="outside"
                     value="outside"
+                    checked={radios}
+                    onChange={() => setRadios(true)}
+                    required
                   />
                 </label>
               </div>
             </div>
-            <button type="submit">Let's go</button>
+            <button type="submit" aria-label="on click">Let's go</button>
           </form>
         </div>
         <div className="reservImage">

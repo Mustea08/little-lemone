@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import food from "../images/restauranfood.jpg";
 import salad from "../images/greek salad.jpg";
 import bruchete from "../images/burch.png";
@@ -25,7 +26,7 @@ const Main = () => {
               food and classic cocktails in a lively but casual environment. The
               restaurant features a locally-sourced.
             </p>
-            <button>reserve table</button>
+            <button><Link to="/reservation" className="btn">reserve table</Link></button>
           </div>
           <div className="image">
             <img src={food} alt="" />

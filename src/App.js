@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 // import Footer from "./components/Footer";
-import Resrvation from "./components/Resrvation";
+import Resrvation from "./components/booking-files/Resrvation";
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {

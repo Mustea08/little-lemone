@@ -1,7 +1,8 @@
 * {
   margin: 0;
 }
-main{
+
+main {
   width: 100%;
 }
 
@@ -48,6 +49,17 @@ button {
   border-radius: 7px;
   padding: .6rem;
   margin-bottom: 1rem;
+}
+
+button:hover {
+  background: #c7a705;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+  color: #000000;
 }
 
 
@@ -222,31 +234,37 @@ button {
 /* ------------------------------------------------------------
 ------------------media qurey responsive design-----------------
 ---------------------------------------------------------------- */
-@media only screen and (max-width: 780px){
-  .mainC .content{
+@media only screen and (max-width: 780px) {
+  .mainC .content {
     margin-left: 1rem;
   }
-  .about{
+
+  .about {
     flex-direction: column;
     overflow-x: hidden;
   }
-  .about .contents{
+
+  .about .contents {
     margin-right: 0;
     margin-left: 1rem;
   }
-  .contents>p{
+
+  .contents>p {
     margin-right: 0;
   }
-  .about .pictures{
+
+  .about .pictures {
     position: static;
     max-width: 100%;
   }
-  .pictures img:first-of-type{
+
+  .pictures img:first-of-type {
     position: static;
     width: 45%;
     margin: 0 2% 0 2%;
   }
-  .pictures img:last-of-type{
+
+  .pictures img:last-of-type {
     position: static;
     width: 45%;
     margin: 0 2% 0 2%;

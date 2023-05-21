@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from '../images/Logo.svg';
 import { Link } from 'react-router-dom';
 import "./nav.css";
 
 const Nav = () => {
+  const [state, setstate] = useState(false);
+
   function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -11,6 +13,7 @@ const Nav = () => {
     } else {
       x.className = "topnav";
     }
+    setstate(!state)
   }
   return (
     <nav className='topnav' id="myTopnav">
@@ -22,9 +25,13 @@ const Nav = () => {
         <li><Link to="/reservation">Reservation</Link></li>
         <li><a href="/#menu">Order-online</a></li>
         <li><a href="/#login">Login</a></li>
-        <a href="javascript:void(0);" className="icon" onClick={myFunction}>
-          <i class="fa fa-bars"></i>
-        </a>
+        <span /*href="javascript:void(0);"*/ className="icon" onClick={myFunction}>
+          {state === true ?
+            <i className="fa-sharp fa-solid fa-x"></i>
+            :
+            <i className="fa fa-bars"></i>
+          }
+        </span>
       </ul>
     </nav>
   );
